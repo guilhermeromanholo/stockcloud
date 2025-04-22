@@ -1,0 +1,22 @@
+.background-banner {
+  background-image: url('../img/banner2.png');
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  width: 100vw;
+}
+
+.form-control {
+  border: 0.1em solid #CCCCC;
+  border-radius: 0;
+  box-shadow: none; 
+}
+
+.form-control:focus {
+  border: 0.1em solid gray;
+  box-shadow: none; 
+}
+
+textarea {
+  resize: none;
+}

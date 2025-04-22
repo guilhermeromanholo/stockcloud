@@ -1,5 +1,5 @@
 function loadPage(page) {
-	fetch('../html/' + page)
+	fetch('html/' + page)
 		.then(response => response.text())
 		.then(html => {
 			document.getElementById('page-content').innerHTML = html;
@@ -9,4 +9,4 @@ function loadPage(page) {
 		});
 }
 
-window.onload = () => loadPage('../html/home.html');
+window.onload = () => loadPage('sobre.html');
