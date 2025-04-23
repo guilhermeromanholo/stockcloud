@@ -9,4 +9,4 @@ function loadPage(page) {
 		});
 }
 
-window.onload = () => loadPage('sobre.html');
+window.onload = () => loadPage('home.html');

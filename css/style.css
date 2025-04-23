@@ -1,5 +1,21 @@
 .background-banner {
-  background-image: url('../img/banner2.png');
+  background-image: url('../img/banners/estoque.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  width: 100vw;
+}
+
+.background-city {
+  background-image: url('../img/banners/city.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  width: 100vw;
+}
+
+.background-net {
+  background-image: url('../img/banners/contato.png');
   background-size: cover;
   background-position: center;
   height: 400px;
