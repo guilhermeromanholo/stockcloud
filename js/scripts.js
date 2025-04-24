@@ -1,12 +1,15 @@
-function loadPage(page) {
-	fetch('html/' + page)
-		.then(response => response.text())
-		.then(html => {
-			document.getElementById('page-content').innerHTML = html;
-		})
-		.catch(error => {
-			document.getElementById('page-content').innerHTML = '<p>Erro ao carregar a página.</p>';
-		});
-}
+window.addEventListener("hashchange", function() {
+    const page = location.hash.replace("#", "");
+    showPage(document.getElementById(page));
+});
 
-window.onload = () => loadPage('home.html');
+window.addEventListener("DOMContentLoaded", function() {
+    const page = location.hash.replace("#", "") || "inicio";
+    showPage(document.getElementById(page));
+});
+
+function showPage(page) {
+    const allPages = document.querySelectorAll(".page");
+    allPages.forEach(p => p.style.display = "none");
+    page.style.display = "block";
+}

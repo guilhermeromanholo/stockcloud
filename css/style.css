@@ -1,4 +1,4 @@
-.background-banner {
+.bg-banner {
   background-image: url('../img/banners/estoque.jpg');
   background-size: cover;
   background-position: center;
@@ -6,7 +6,7 @@
   width: 100vw;
 }
 
-.background-city {
+.bg-city {
   background-image: url('../img/banners/city.jpg');
   background-size: cover;
   background-position: center;
@@ -14,7 +14,7 @@
   width: 100vw;
 }
 
-.background-net {
+.bg-net {
   background-image: url('../img/banners/contato.png');
   background-size: cover;
   background-position: center;
