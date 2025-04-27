@@ -28,6 +28,10 @@
       <?php include('php/contato.php') ?>
     </div>
 
+    <div id="login" class="page" style="display:none;">
+      <?php include('php/login.php') ?>
+    </div>
+
     <div id="cadastro" class="page" style="display:none;">
       <?php include('php/cadastro.php') ?>
     </div>
