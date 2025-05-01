@@ -1,4 +1,6 @@
 import "./globals.css";
+
+import { Toaster } from "@/components/ui/sonner"
 import { Navbar } from "@/components/custom/navbar";
 
 export default function RootLayout({
@@ -11,6 +13,7 @@ export default function RootLayout({
       <body>
         <Navbar/>
         {children}
+        <Toaster/>
       </body>
     </html>
   );

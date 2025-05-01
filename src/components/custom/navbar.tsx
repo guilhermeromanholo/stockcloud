@@ -16,9 +16,11 @@ const items: { title: string; href: string }[] = [
 
 export function Navbar() {
   return (
-    <header className="bg-neutral-800">
-      <div className="flex flex-row gap-2 items-center justify-between p-2 mx-5">
-        <Logo/>
+    <div>
+      <header
+        className="flex justify-between fixed top-2 left-1/2 
+        -translate-x-1/2 w-[98%] z-50 bg-primary rounded-xl shadow-lg px-6 py-3">
+        <Logo />
 
         <NavigationMenu>
           <NavigationMenuList>
@@ -38,7 +40,7 @@ export function Navbar() {
           </Button>
           <Button variant="secondary">Registre-se</Button>
         </div>
-      </div>
-    </header>
+      </header>
+    </div>
   );
 }
