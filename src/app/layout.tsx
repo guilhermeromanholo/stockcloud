@@ -1,5 +1,5 @@
-import { Navbar } from "@/components/custom/navbar";
 import "./globals.css";
+import { Navbar } from "@/components/custom/navbar";
 
 export default function RootLayout({
   children,
@@ -8,7 +8,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={`antialiased`}>
+      <body>
         <Navbar/>
         {children}
       </body>
