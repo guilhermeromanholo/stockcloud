@@ -1,7 +1,7 @@
+import { Footer } from "@/components/custom/footer";
 import "./globals.css";
 
 import { Toaster } from "@/components/ui/sonner"
-import { Navbar } from "@/components/custom/navbar";
 
 export default function RootLayout({
   children,
@@ -9,11 +9,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" className="scroll-smooth">
       <body>
-        <Navbar/>
         {children}
-        <Toaster/>
+        <Toaster position="top-left"/>
       </body>
     </html>
   );

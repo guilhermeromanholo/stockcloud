@@ -5,13 +5,13 @@ import {
   NavigationMenuList,
 } from "../ui/navigation-menu";
 
-import { Logo } from "./logo";
+import Image from "next/image";
 import { Button } from "../ui/button";
 
 const items: { title: string; href: string }[] = [
-  { title: "Início", href: "/" },
-  { title: "Sobre", href: "/sobre" },
-  { title: "Contato", href: "/contato" },
+  { title: "Início", href: "#" },
+  { title: "Sobre", href: "#sobre" },
+  { title: "Contato", href: "#contato" },
 ];
 
 export function Navbar() {
@@ -19,8 +19,12 @@ export function Navbar() {
     <div>
       <header
         className="flex justify-between fixed top-2 left-1/2 
-        -translate-x-1/2 w-[98%] z-50 bg-primary rounded-xl shadow-lg px-6 py-3">
-        <Logo />
+        -translate-x-1/2 w-[98%] z-50 bg-primary rounded-xl shadow-lg px-6 py-3"
+      >
+        <div className="flex items-center gap-2">
+          <Image src={"/logo.png"} alt="logo" width="35" height="35" />
+          <span className="text-white font-bold">StockClound</span>
+        </div>
 
         <NavigationMenu>
           <NavigationMenuList>
