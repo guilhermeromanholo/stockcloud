@@ -28,6 +28,15 @@
               pnpm.install.enable = true;
             };
           };
+
+          env = {
+            PRISMA_ENGINES_CHECKSUM_IGNORE_MISSING = 1;
+            PRISMA_MIGRATION_ENGINE_BINARY="${pkgs.prisma-engines}/bin/schema-engine";
+            PRISMA_QUERY_ENGINE_BINARY="${pkgs.prisma-engines}/bin/query-engine";
+            PRISMA_QUERY_ENGINE_LIBRARY="${pkgs.prisma-engines}/lib/libquery_engine.node";
+            PRISMA_INTROSPECTION_ENGINE_BINARY="${pkgs.prisma-engines}/bin/introspection-engine";
+            PRISMA_FMT_BINARY="${pkgs.prisma-engines}/bin/prisma-fmt";
+          };
         };
       };
     };
