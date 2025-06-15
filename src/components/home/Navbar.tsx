@@ -9,8 +9,10 @@ import Image from "next/image";
 import { Button } from "@/components/shadcn/button";
 
 export interface NavbarProps {
-    id?: string
-    items: {title: string, href: string}[]
+    id?: string;
+    items: {title: string, href: string}[];
+    onLoginClick: () => void;
+    onRegisterClick: () => void;
 }
 
 export function Navbar(props: NavbarProps) {
@@ -38,10 +40,10 @@ export function Navbar(props: NavbarProps) {
         </NavigationMenu>
 
         <div className="flex flex-row gap-2">
-          <Button variant="ghost" className="text-white">
+          <Button variant="ghost" className="text-white" onClick={props.onLoginClick}>
             Login
           </Button>
-          <Button variant="secondary">Registre-se</Button>
+          <Button variant="secondary" onClick={props.onRegisterClick}>Registre-se</Button>
         </div>
       </header>
     </div>

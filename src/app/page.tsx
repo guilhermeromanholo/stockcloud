@@ -1,9 +1,14 @@
-import { Cards } from "@/components/home/Cards";
+'use client'
+
 import { Banner } from "@/components/home/Banner";
 import { Navbar } from "@/components/home/Navbar";
 
-import { ReactElement } from "react";
-import { ChartColumnIncreasing, ChartPie, ClipboardList, Lightbulb } from "lucide-react";
+import { ContactPage } from "@/components/contact/ContactPage";
+import { AboutPage } from "@/components/about/AboutPage";
+import { Footer } from "@/components/home/Footer";
+import { useState } from "react";
+import { LoginDialog } from "@/components/login/LoginDialog";
+import { RegisterDialog } from "@/components/login/RegisterDialog";
 
 const navItems: { title: string, href: string }[] = [
   { title: "Início", href: "#" },
@@ -11,39 +16,44 @@ const navItems: { title: string, href: string }[] = [
   { title: "Contato", href: "#contato" },
 ];
 
-const cards: { icon: ReactElement; title: string; content: string }[] = [
-  {
-    icon: <Lightbulb className="w-10 h-10"/>,
-    title: "Inovação Constante",
-    content:
-      "Estamos sempre em busca de novas tecnologias para tornar o gerenciamento de estoque mais ágil e eficiente.",
-  },
-  {
-    icon: <ClipboardList className="w-10 h-10"/>,
-    title: "Planejamento Estratégico",
-    content: "Facilitamos o planejamento de compras e reposição de mercadorias com base em dados atualizados em tempo real."
-  },
-  {
-    icon: <ChartPie className="w-10 h-10"/>,
-    title: "Análises Detalhadas",
-    content: "Visualize relatórios gráficos que ajudam a identificar tendências de consumo e otimizar seu estoque.",
-  },
-  {
-    icon: <ChartColumnIncreasing className="w-10 h-10"/>,
-    title: "Resultados Visíveis",
-    content: "Com nossos gráficos e métricas, acompanhe o crescimento do seu negócio e tome decisões mais inteligentes."
-  },
-];
-
 export default function Home() {
+  const [loginOpen, setLoginOpen] = useState(false)
+  const [registerOpen, setRegisterOpen] = useState(false)
+
   return (
     <div>
-      <Navbar items={navItems}/>
+      <Navbar 
+        items={navItems} 
+        onLoginClick={() => setLoginOpen(true)}
+        onRegisterClick={() => setRegisterOpen(true)}
+      />
       <Banner id="#"/>
 
+      <LoginDialog
+        open={loginOpen} onOpenChange={setLoginOpen}
+        onSwitchToRegister={() => {
+          setLoginOpen(false);
+          setRegisterOpen(true);
+        }}
+      />
+
+      <RegisterDialog
+        open={registerOpen} onOpenChange={setRegisterOpen}
+        onSwitchToLogin={() => {
+          setRegisterOpen(false);
+          setLoginOpen(true);
+        }}
+      />
+
       <div id="sobre">
-        <Cards cards={cards}/>
+        <AboutPage />
       </div>
+
+      <div id="contato">
+        <ContactPage />
+      </div>
+
+      <Footer />
     </div>
   );
 }
