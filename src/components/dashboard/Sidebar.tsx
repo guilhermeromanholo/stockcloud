@@ -13,8 +13,8 @@ export function Sidebar() {
   const navItems = [
     { name: 'Dashboard', href: '/dashboard', icon: Home },
     { name: 'Produtos', href: '/dashboard/products', icon: Package },
-    { name: 'Lucros', href: '/dashboard/profits', icon: DollarSign },
-    { name: 'Relatórios', href: '/dashboard/reports', icon: LineChart },
+    // { name: 'Lucros', href: '/dashboard/profits', icon: DollarSign },
+    // { name: 'Relatórios', href: '/dashboard/reports', icon: LineChart },
     { name: 'Configurações', href: '/dashboard/settings', icon: Settings },
   ];
 
