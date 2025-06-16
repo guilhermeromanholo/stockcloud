@@ -9,10 +9,12 @@ import { Footer } from "@/components/home/Footer";
 import { useState } from "react";
 import { LoginDialog } from "@/components/login/LoginDialog";
 import { RegisterDialog } from "@/components/login/RegisterDialog";
+import { PricingSection } from "@/components/pricing/PricingSection";
 
 const navItems: { title: string, href: string }[] = [
   { title: "Início", href: "#" },
   { title: "Sobre", href: "#sobre" },
+  { title: "Preços", href: "#precos" },
   { title: "Contato", href: "#contato" },
 ];
 
@@ -47,6 +49,10 @@ export default function Home() {
 
       <div id="sobre">
         <AboutPage />
+      </div>
+
+      <div id="precos">
+        <PricingSection />
       </div>
 
       <div id="contato">
