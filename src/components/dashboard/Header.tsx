@@ -1,8 +1,8 @@
-import { UserNav } from '@/components/dashboard/UserNav'; 
+import { UserNav } from '@/components/dashboard/UserNav';
 import { Input } from '@/components/shadcn/input';
 import { BellIcon, SearchIcon } from 'lucide-react';
 import { Button } from '@/components/shadcn/button';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/shadcn/sheet'; 
+import { Sheet, SheetContent, SheetTrigger } from '@/components/shadcn/sheet';
 
 export function Header() {
   return (
@@ -35,13 +35,6 @@ export function Header() {
 
         <div className="flex flex-1 items-center justify-between">
           <h2 className="text-lg font-semibold text-gray-900 dark:text-white md:block hidden">Dashboard</h2> {/* Ou o título da página atual */}
-          <div className="flex-1 ml-4 md:ml-0 max-w-sm">
-            <Input
-              type="search"
-              placeholder="Pesquisar..."
-              className="md:w-[100px] lg:w-[300px]"
-            />
-          </div>
           <div className="flex items-center space-x-4">
             <Button variant="ghost" size="icon" className="relative">
               <BellIcon className="h-5 w-5" />

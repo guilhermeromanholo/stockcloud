@@ -20,6 +20,7 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Image from "next/image";
+import { redirect } from "next/navigation";
 
 const loginSchema = z.object({
   email: z.string().email("Email inválido"),
@@ -47,6 +48,7 @@ export function LoginDialog({
   const onSubmit = (data: LoginData) => {
     console.log("Login:", data);
     onOpenChange(false);
+    redirect('/dashboard')
   };
 
   return (
